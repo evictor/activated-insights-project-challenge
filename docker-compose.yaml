@@ -1,0 +1,28 @@
+version: '3.7'
+
+networks:
+  ai-project-challenge:
+
+volumes:
+  code-volume:
+    driver: local
+
+services:
+  django:
+    build:
+      context: ./backend
+      dockerfile: docker/django/Dockerfile
+    container_name: ai-django
+    image: ai-django
+    environment:
+      ENV_FILE: docker-compose.env
+      ENVIRONMENT: local
+    command: bash -c "./manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - ./backend:/app
+    ports:
+      - "8000:8000"
+    stdin_open: true
+    tty: true
+    networks:
+      - ai-project-challenge
