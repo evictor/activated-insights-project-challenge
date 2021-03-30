@@ -1,17 +1,11 @@
 # project-challenge
 
-1. Backend
-
 Run the backend with docker-compose:
+
 ```
 cd backend
-docker-compose up
+docker-compose up --build
 ```
 
-2. Frontend
-Run the frontend:
-
-```
-cd frontend
-yarn start
-```
+View graphql explorer at
+http://localhost:8000/graphql
