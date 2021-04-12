@@ -21,6 +21,7 @@ services:
     command: bash -c "./manage.py runserver 0.0.0.0:8000"
     volumes:
       - ./backend:/app
+      - ./sample-data:/sample-data
     ports:
       - "8000:8000"
     stdin_open: true
