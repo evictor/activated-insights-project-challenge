@@ -41,3 +41,24 @@ docker-compose up --build
 
 View the graphql explorer at
 http://localhost:8000/graphql
+
+### Zeke's solution
+
+#### Ingestion
+
+Since the runtime is a Docker container, you need to send the underlying Django management command through Docker. My
+command takes 1 positional param, a path to the file to ingest; the following issues the command in a one-off container
+derived from the `django` service directed to ingest the challenge sample data from the `/sample-data` volume mount. 
+
+```shell
+docker-compose run --rm django ./manage.py ingest_participant_feed /sample-data/coding_challenge_data.xlsx
+```
+
+#### Celery queue
+
+TODO: Queue that accepts messages with files to ingest
+TODO: Consumer that processes queue messages into issues of the ingestion command
+
+#### GQL
+
+TODO: GQL endpoint per spec
