@@ -9,7 +9,7 @@ class Participant(models.Model):
     participant_code = models.PositiveIntegerField(primary_key=True)
     job_title = models.CharField(max_length=32)
     department = models.CharField(max_length=32)
-    birth_date = models.DateField()
+    birth_date = models.DateField(blank=True, null=True)
 
     # """Last (latest) feed from which this participant was inserted or updated"""
     # feed = models.ForeignKey('ParticipantFeed', on_delete=models.PROTECT, related_name='participants',
