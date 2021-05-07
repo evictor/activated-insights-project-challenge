@@ -4,3 +4,4 @@ graphene-django==2.9.1
 pandas==1.2.3
 openpyxl==3.0.4 # Pandas will use this to read XLSX - https://openpyxl.readthedocs.io/en/stable/index.html
 defusedxml==0.6.0 # openpyxl will use to patch some XLSX vulns: https://pypi.org/project/defusedxml/
+numpy==1.20.2

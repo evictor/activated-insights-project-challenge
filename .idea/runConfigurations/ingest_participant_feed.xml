@@ -7,13 +7,13 @@
       <env name="PYTHONUNBUFFERED" value="1" />
     </envs>
     <option name="SDK_HOME" value="docker-compose://[$PROJECT_DIR$/docker-compose.yaml]:django/python" />
-    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend/apps/main/management/commands" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend" />
     <option name="IS_MODULE_SDK" value="true" />
     <option name="ADD_CONTENT_ROOTS" value="true" />
     <option name="ADD_SOURCE_ROOTS" value="true" />
     <EXTENSION ID="DockerComposeSettingsRunConfigurationExtension" commandLine="run --rm" />
     <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-    <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backend/manage.py" />
+    <option name="SCRIPT_NAME" value="manage.py" />
     <option name="PARAMETERS" value="ingest_participant_feed /sample-data/coding_challenge_data.xlsx" />
     <option name="SHOW_COMMAND_LINE" value="false" />
     <option name="EMULATE_TERMINAL" value="false" />
